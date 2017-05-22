@@ -9,7 +9,7 @@
 #
 # Please see http://i3wm.org/docs/userguide.html for a complete reference!
 
-exec bash ~/ownCloud/scripts/autostart.sh
+exec bash ~/.config/notebookConfig/scripts/autostart.sh
 
 hide_edge_borders vertical 
 
