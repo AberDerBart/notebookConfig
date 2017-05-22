@@ -1,0 +1,8 @@
+shutdown	sudo shutdown -h now
+shutdown timer	bash ownCloud/scripts/shutdownTimer.sh
+music faultier	bash ownCloud/scripts/setMpdHost.sh faultier
+music panda	bash ownCloud/scripts/setMpdHost.sh panda
+cancel shutdown	sudo shutdown -c
+reboot	sudo shutdown -r now
+disable touchpad	sh /home/nonatz/ownCloud/scripts/touchpad.sh 0
+enable touchpad	sh /home/nonatz/ownCloud/scripts/touchpad.sh 1
