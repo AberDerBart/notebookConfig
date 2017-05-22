@@ -179,8 +179,8 @@ bindsym XF86Launch1 exec "bash ~/.config/notebookConfig/scripts/launcher.sh"
 bindsym $mod+Shift+d exec "bash ~/ownCloud/scripts/runFileParam.sh"
 
 # applications
-bindsym $mod+b exec "bash -c $BROWSER"
-bindsym $mod+m exec "bash -c $MAILER"
+bindsym $mod+b exec "firefox"
+bindsym $mod+m exec "thunderbird"
 
 # audio
 bindsym Control+Shift+Right exec "bash ~/ownCloud/scripts/mpc.sh next"
