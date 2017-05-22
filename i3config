@@ -13,7 +13,7 @@ exec bash ~/ownCloud/scripts/autostart.sh
 
 hide_edge_borders vertical 
 
-set $mod Mod1
+set $mod Mod4
 
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below.
@@ -175,23 +175,21 @@ assign [class="Pidgin"] 10:comm
 # bind keys
 
 # launchers
-bindsym $mod+space exec "bash ~/ownCloud/scripts/launcher.sh"
+bindsym XF86Launch1 exec "bash ~/.config/notebookConfig/scripts/launcher.sh"
 bindsym $mod+Shift+d exec "bash ~/ownCloud/scripts/runFileParam.sh"
 
 # applications
-bindsym $mod+b exec "bash ~/ownCloud/scripts/override.sh browser.sh"
-bindsym $mod+Shift+b exec "bash ~/ownCloud/scripts/override.sh browser.sh `xclip -o`"
-bindsym $mod+m exec "bash ~/ownCloud/scripts/override.sh mail.sh"
+bindsym $mod+b exec "bash -c $BROWSER"
+bindsym $mod+m exec "bash -c $MAILER"
 
 # audio
 bindsym Control+Shift+Right exec "bash ~/ownCloud/scripts/mpc.sh next"
 bindsym Control+Shift+space exec "bash ~/ownCloud/scripts/mpc.sh toggle"
 bindsym Control+Shift+Left exec "bash ~/ownCloud/scripts/mpc.sh prev"
 
-bindsym Control+Shift+Up exec "pamixer -i 2"
-bindsym Control+Shift+Down exec "pamixer -d 2"
-bindsym Control+Shift+m exec "pamixer -t"
+bindsym XF86AudioMute exec "pamixer -t"
+bindsym XF86AudioLowerVolume exec "pamixer -d 2"
+bindsym XF86AudioRaiseVolume exec "pamixer -i 2"
 
 # system
 bindsym Control+Shift+l exec "i3lock -c 000000"
-bindsym Mod4+l exec "bash ~/ownCloud/scripts/override.sh lock.sh"

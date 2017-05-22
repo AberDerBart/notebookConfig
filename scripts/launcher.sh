@@ -5,8 +5,8 @@ then
 	LAUCH_TABLE=$1
 	LAUNCH_TABLE_CUSTOM=""
 else
-	LAUNCH_TABLE=~/ownCloud/config/launcher.tbl
-	LAUNCH_TABLE_CUSTOM=~/ownCloud/config/${HOSTNAME}/launcher.tbl
+	LAUNCH_TABLE=~/.config/notebookConfig/launcher.tbl
+	LAUNCH_TABLE_CUSTON=""
 fi
 
 
