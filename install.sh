@@ -15,3 +15,5 @@ function ask {
 ask "Install i3 config?" && mkdir -p ~/.config/i3/ && ln -s $PWD/i3config ~/.config/i3/config
 ask "Install i3status config?" && mkdir -p ~/.config/i3 && ln -s $PWD/i3status ~/.config/i3status/config
 ask "Install .bashrc?" && ln -s $PWD/bashrc ~/.bashrc
+ask "Install .taskrc?" && ln -s $PWD/taskrc ~/.taskrc
+ask "Install .taskrc?" && ln -s $PWD/taskrc ~/.taskrc
