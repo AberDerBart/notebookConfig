@@ -15,7 +15,7 @@ CHOICE=`cat $LAUNCH_TABLE $LAUNCH_TABLE_CUSTOM | cut -f 1 | dmenu -i`
 
 if [ $? == 0 ]
 then
-	COMMAND=`cat $LAUNCH_TABLE $LAUNCH_TABLE_CUSTOM | grep "^$CHOICE" | cut -f 2`
+	COMMAND=`cat $LAUNCH_TABLE $LAUNCH_TABLE_CUSTOM | grep -P "^$CHOICE\t" | cut -f 2`
 
 	echo "Launching $COMMAND"
 	$COMMAND
