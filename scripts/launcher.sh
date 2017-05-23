@@ -6,7 +6,7 @@ then
 	LAUNCH_TABLE_CUSTOM=""
 else
 	LAUNCH_TABLE=~/.config/notebookConfig/launcher.tbl
-	LAUNCH_TABLE_CUSTON=""
+	LAUNCH_TABLE_CUSTOM=""
 fi
 
 
