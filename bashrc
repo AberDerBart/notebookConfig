@@ -14,3 +14,5 @@ export EDITOR="vim"
 
 export BROWSER="firefox"
 export MAILER="thunderbird"
+
+task
