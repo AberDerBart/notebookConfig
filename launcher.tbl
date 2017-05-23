@@ -1,8 +1,6 @@
 shutdown	shutdown -h now
-shutdown timer	bash ownCloud/scripts/shutdownTimer.sh
-music faultier	bash ownCloud/scripts/setMpdHost.sh faultier
-music panda	bash ownCloud/scripts/setMpdHost.sh panda
+shutdown timer	shutdown -h $(echo |dmenu -p "Shutdown delay (in minutes):")
 cancel shutdown	shutdown -c
 reboot	shutdown -r now
-disable touchpad	sh /home/nonatz/ownCloud/scripts/touchpad.sh 0
-enable touchpad	sh /home/nonatz/ownCloud/scripts/touchpad.sh 1
+music faultier	bash ownCloud/scripts/setMpdHost.sh faultier
+music panda	bash ownCloud/scripts/setMpdHost.sh panda
