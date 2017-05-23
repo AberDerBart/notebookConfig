@@ -183,13 +183,23 @@ bindsym $mod+b exec "firefox"
 bindsym $mod+m exec "thunderbird"
 
 # audio
-bindsym Control+Shift+Right exec "bash ~/ownCloud/scripts/mpc.sh next"
-bindsym Control+Shift+space exec "bash ~/ownCloud/scripts/mpc.sh toggle"
-bindsym Control+Shift+Left exec "bash ~/ownCloud/scripts/mpc.sh prev"
+bindsym XF86AudioNext exec "bash ~/ownCloud/scripts/mpc.sh next"
+bindsym XF86AudioPlay exec "bash ~/ownCloud/scripts/mpc.sh toggle"
+bindsym XF86AudioPrev exec "bash ~/ownCloud/scripts/mpc.sh prev"
+bindsym XF86AudioStop exec "bash ~/ownCloud/scripts/mpc.sh stop"
 
 bindsym XF86AudioMute exec "pamixer -t"
 bindsym XF86AudioLowerVolume exec "pamixer -d 2"
 bindsym XF86AudioRaiseVolume exec "pamixer -i 2"
+bindsym XF86AudioMicMute exec "pamixer --default-source -t"
 
 # system
 bindsym XF86ScreenSaver exec "i3lock -c 000000"
+bindsym XF86Display exec "arandr"
+
+# dummys
+bindsym XF86WebCam exec "echo bla"
+bindsym XF86TouchpadToggle exec "echo bla"
+bindsym XF86Battery exec "echo bla"
+bindsym XF86Suspend exec "echo bla"
+bindsym XF86Sleep exec "i3lock -c 444444"
