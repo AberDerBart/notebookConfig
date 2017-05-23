@@ -183,10 +183,10 @@ bindsym $mod+b exec "firefox"
 bindsym $mod+m exec "thunderbird"
 
 # audio
-bindsym XF86AudioNext exec "bash ~/ownCloud/scripts/mpc.sh next"
-bindsym XF86AudioPlay exec "bash ~/ownCloud/scripts/mpc.sh toggle"
-bindsym XF86AudioPrev exec "bash ~/ownCloud/scripts/mpc.sh prev"
-bindsym XF86AudioStop exec "bash ~/ownCloud/scripts/mpc.sh stop"
+bindsym XF86AudioNext exec "bash ~/.config/notebookConfig/scripts/mpc.sh next"
+bindsym XF86AudioPlay exec "bash ~/.config/notebookConfig/scripts/mpc.sh toggle"
+bindsym XF86AudioPrev exec "bash ~/.config/notebookConfig/scripts/mpc.sh prev"
+bindsym XF86AudioStop exec "bash ~/.config/notebookConfig/scripts/mpc.sh stop"
 
 bindsym XF86AudioMute exec "pamixer -t"
 bindsym XF86AudioLowerVolume exec "pamixer -d 2"
