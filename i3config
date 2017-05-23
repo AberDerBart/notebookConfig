@@ -176,7 +176,7 @@ assign [class="Pidgin"] 10:comm
 
 # launchers
 bindsym XF86Launch1 exec "bash ~/.config/notebookConfig/scripts/launcher.sh"
-bindsym $mod+Shift+d exec "bash ~/ownCloud/scripts/runFileParam.sh"
+bindsym $mod+Shift+d exec "bash ~/.config/notebookConfig/runFileParam.sh"
 
 # applications
 bindsym $mod+b exec "firefox"
