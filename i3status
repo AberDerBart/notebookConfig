@@ -11,7 +11,7 @@ general {
         interval = 5
 }
 
-order += "wireless wlan0"
+order += "wireless wlp3s0"
 order += "ethernet eth0"
 order += "battery 0"
 order += "volume master"
@@ -21,7 +21,7 @@ order += "tztime local"
 volume master {
 	format = "♪: %volume"
 	format_muted = "♪: muted (%volume)"
-	device = "pulse:1"
+	device = "pulse:0"
 }
 
 wireless wlp3s0 {
