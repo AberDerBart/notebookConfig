@@ -1,15 +1,5 @@
 #!/bin/bash
-
-function ask {
-	question=$1
-	read -r -p "${1} [y/N]: " REPLY
-
-	case $REPLY in
-		[yY]) return 0;;
-		*) return 1;;
-	esac
-
-}
+source scripts/ask.sh
 
 if ask "Install i3 config?"; then
 	set -o xtrace
@@ -28,6 +18,10 @@ if ask "Install .bashrc?"; then
        	ln -s $PWD/bashrc ~/.bashrc
 	set +o xtrace
 fi
+if ask "Install .taskrc?"; then
+	set -o xtrace
+	ln -s $PWD/taskrc ~/.taskrc
+	set +o xtrace
 if ask "Install scripts?"; then
 	set -o xtrace
        	mkdir -p ~/.software 

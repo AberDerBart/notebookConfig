@@ -1,15 +1,5 @@
 #!/bin/bash
-
-function ask {
-	question=$1
-	read -r -p "${1} [y/N]: " REPLY
-
-	case $REPLY in
-		[yY]) return 0;;
-		*) return 1;;
-	esac
-
-}
+source scripts/ask.sh
 
 ask "Install task?" && pacman -S task
 ask "Install GUI?" && pacman -S i3 xorg-server lxdm feh lxterminal
