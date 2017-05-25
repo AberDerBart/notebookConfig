@@ -1,6 +1,6 @@
 shutdown	shutdown -h now
-shutdown timer	bash /home/bart/.config/notebookConfig/scripts/shutdownTimer.sh
+shutdown timer	bash /home/bart/.software/scripts/shutdownTimer.sh
 cancel shutdown	shutdown -c
 reboot	shutdown -r now
-music faultier	bash /home/bart/.config/notebookConfig/scripts/setMpdHost.sh faultier
-music panda	bash /home/bart/.config/notebookConfig/scripts/setMpdHost.sh panda
+music faultier	bash /home/bart/.software/scripts/setMpdHost.sh faultier
+music panda	bash /home/bart/.software/scripts/setMpdHost.sh panda

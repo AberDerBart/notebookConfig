@@ -9,7 +9,7 @@
 #
 # Please see http://i3wm.org/docs/userguide.html for a complete reference!
 
-exec bash ~/.config/notebookConfig/scripts/autostart.sh
+exec bash ~/.software/scripts/autostart.sh
 
 hide_edge_borders vertical 
 
@@ -175,7 +175,7 @@ assign [class="Pidgin"] 10:comm
 # bind keys
 
 # launchers
-bindsym XF86Launch1 exec "bash ~/.config/notebookConfig/scripts/launcher.sh"
+bindsym XF86Launch1 exec "bash ~/.software/scripts/launcher.sh"
 bindsym $mod+Shift+d exec "bash ~/.config/notebookConfig/runFileParam.sh"
 
 # applications
@@ -183,10 +183,10 @@ bindsym $mod+b exec "firefox"
 bindsym $mod+m exec "thunderbird"
 
 # audio
-bindsym XF86AudioNext exec "bash ~/.config/notebookConfig/scripts/mpc.sh next"
-bindsym XF86AudioPlay exec "bash ~/.config/notebookConfig/scripts/mpc.sh toggle"
-bindsym XF86AudioPrev exec "bash ~/.config/notebookConfig/scripts/mpc.sh prev"
-bindsym XF86AudioStop exec "bash ~/.config/notebookConfig/scripts/mpc.sh stop"
+bindsym XF86AudioNext exec "bash ~/.software/scripts/mpc.sh next"
+bindsym XF86AudioPlay exec "bash ~/.software/scripts/mpc.sh toggle"
+bindsym XF86AudioPrev exec "bash ~/.software/scripts/mpc.sh prev"
+bindsym XF86AudioStop exec "bash ~/.software/scripts/mpc.sh stop"
 
 bindsym XF86AudioMute exec "pamixer -t"
 bindsym XF86AudioLowerVolume exec "pamixer -d 2"
