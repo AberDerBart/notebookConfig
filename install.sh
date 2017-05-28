@@ -22,6 +22,7 @@ if ask "Install .taskrc?"; then
 	set -o xtrace
 	ln -s $PWD/taskrc ~/.taskrc
 	set +o xtrace
+fi
 if ask "Install scripts?"; then
 	set -o xtrace
        	mkdir -p ~/.software 
