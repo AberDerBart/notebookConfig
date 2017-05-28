@@ -14,5 +14,11 @@ export EDITOR="vim"
 
 export BROWSER="firefox"
 export MAILER="thunderbird"
+alias plottool="/usr/bin/python2 /home/bart/.software/plottool/plottool.py"
+
+if [[ -e ~/.mpcrc ]]
+then
+	source ~/.mpcrc
+fi
 
 task
