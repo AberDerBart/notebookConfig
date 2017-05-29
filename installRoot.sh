@@ -45,6 +45,9 @@ if ask "Install python?"; then
 fi
 
 if ask "Install steam?"; then
+	echo "[multilib]
+Include = /etc/pacman.d/mirrorlist" >> /etc/pacman.conf
+	pacman -Syu
 	pacman -S steam
 fi
 
