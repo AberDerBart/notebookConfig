@@ -1,17 +1,62 @@
 #!/bin/bash
 source scripts/ask.sh
 
-ask "Install task?" && pacman -S task
-ask "Install GUI?" && pacman -S i3 xorg-server lxdm feh lxterminal
-ask "Install owncloud?" && pacman -S owncloud-client
-ask "Install pulse?" && pacman -S pulseaudio pamixer pavucontrol
-ask "Install wifi-menu?" && pacman -S dialog
-ask "Install keyring?" && pacman -S gnome-keyring libgnome-keyring libsecret seahorse
-ask "Install intel ucode?" && pacman -S intel-ucode
-ask "Install NetworkManager?" && pacman -S network-manager-applet networkmanager
-ask "Install ssh?" && pacman -S openssh
-ask "Install python?" && pacman -S python python-pip
-ask "Install steam?" && pacman -S steam
-ask "Install thunderbird?" && pacman -S thunderbird
-ask "Install firefox?"% && pacman -S firefox
-ask "Install vim?" && pacman -S vim
+if ask "Install task?"; then
+	pacman -S task
+fi
+
+if ask "Install GUI?"; then
+	pacman -S i3 xorg-server lxdm feh lxterminal dmenu
+	localectl set-x11-keymap de
+	systemctl enable lxdm
+fi
+
+if ask "Install owncloud?"; then
+	pacman -S owncloud-client
+fi
+
+if ask "Install pulse?"; then
+	pacman -S pulseaudio pamixer pavucontrol
+fi
+
+if ask "Install wifi-menu?"; then
+	pacman -S dialog
+fi
+
+if ask "Install keyring?"; then
+	pacman -S gnome-keyring libgnome-keyring libsecret seahorse
+fi
+
+if ask "Install intel ucode?"; then
+	pacman -S intel-ucode
+fi
+
+if ask "Install NetworkManager?"; then
+	pacman -S network-manager-applet networkmanager
+	systemctl enable NetworkManager
+fi
+
+if ask "Install ssh?"; then
+	pacman -S openssh
+fi
+
+if ask "Install python?"; then
+	pacman -S python python-pip
+fi
+
+if ask "Install steam?"; then
+	pacman -S steam
+fi
+
+if ask "Install thunderbird?"; then
+	pacman -S thunderbird
+fi
+
+if ask "Install firefox?"%; then
+	pacman -S firefox
+fi
+
+if ask "Install vim?"; then
+pacman -S vim
+fi
+
