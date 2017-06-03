@@ -29,3 +29,9 @@ if ask "Install scripts?"; then
 	ln -fs $PWD/scripts ~/.software/
 	set +o xtrace
 fi
+if ask "Install launcher.tbl?"; then
+	set -o xtrace
+	mkdir -p ~/.config
+	ln -fs $PWD/launcher.tbl ~/.config
+	set +o xtrace
+fi
