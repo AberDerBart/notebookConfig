@@ -35,3 +35,9 @@ if ask "Install launcher.tbl?"; then
 	ln -fs $PWD/launcher.tbl ~/.config
 	set +o xtrace
 fi
+if ask "Install ncmpc config?"; then
+	set -o xtrace
+	mkdir -p ~/.ncmpc
+	ln -fs $PWD/ncmpcConfig ~/.ncmpc/config
+	set +o xtrace
+fi
