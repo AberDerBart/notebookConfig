@@ -175,7 +175,7 @@ assign [class="Pidgin"] 10:comm
 # bind keys
 
 # launchers
-bindsym XF86Launch1 exec "bash ~/.software/scripts/launcher.sh"
+bindsym $mod+space exec "bash ~/.software/scripts/launcher.sh"
 bindsym $mod+Shift+d exec "bash ~/.config/notebookConfig/runFileParam.sh"
 
 # applications
