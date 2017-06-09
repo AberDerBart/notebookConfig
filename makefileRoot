@@ -1,0 +1,42 @@
+.PHONY: all task gui owncloud pulse wifimenu keyring networkmanager ssh python steam thunderbird firefox vim mpdfoo intel-ucode allthinkpad
+
+allthinkpad: intel-ucode all
+
+all: task gui owncloud pulse wifimenu keyring networkmanager ssh python steam thunderbird firefox vim mpdfoo
+
+task:
+	pacman -S task
+gui:
+	pacman -S i3 xorg-server lxdm feh lxterminal dmenu
+	localectl set-x11-keymap de
+	systemctl enable lxdm
+owncloud:
+	pacman -S owncloud-client
+pulse:
+	pacman -S pulseaudio pamixer pavucontrol
+wifimenu:
+	pacman -S dialog wpa_supplicant
+keyring:
+	pacman -S gnome-keyring libgnome-keyring libsecret seahorse
+intel-ucode:
+	pacman -S intel-ucode
+networkmanager:
+	pacman -S network-manager-applet networkmanager
+	systemctl enable NetworkManager
+ssh:
+	pacman -S openssh
+python:
+	pacman -S python python-pip
+steam:
+	echo -e "[multilib]\nInclude = /etc/pacman.d/mirrorlist" >> /etc/pacman.conf
+	pacman -Syu
+	pacman -S steam
+thunderbird:
+	pacman -S thunderbird
+firefox:
+	pacman -S firefox
+vim:
+	pacman -S vim
+mpdfoo:
+	pacman -S mpc ncmpc
+	pip install python-mpd2
