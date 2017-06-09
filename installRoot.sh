@@ -63,3 +63,7 @@ if ask "Install vim?"; then
 pacman -S vim
 fi
 
+if ask "Intall mpd-foo?"; then
+	pacman -S mpc ncmpc
+	pip install python-mpd2
+fi
