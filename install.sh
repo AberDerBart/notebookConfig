@@ -18,6 +18,7 @@ if ask "Install i3blocks config?"; then
 	mkdir -p ~/.config/i3blocks
 	ln -fs $PWD/i3status ~/.config/i3blocks/config
 	set +o xtrace
+fi
 if ask "Install .bashrc?"; then
 	set -o xtrace
        	ln -fs $PWD/bashrc ~/.bashrc
