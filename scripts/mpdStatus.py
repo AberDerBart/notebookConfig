@@ -18,6 +18,9 @@ class bcolors:
 stateDict={"play":u'\u25BA',
 	"pause":u'\u2161',
 	"stop":u'\u25A0'}
+stateColors={"play":"#00ff00",
+	"pause":"#ffbb00",
+	"stop":"#ff0000"}
 
 c=mpd.MPDClient()
 
@@ -41,7 +44,11 @@ try:
 		outString+=" "+formattedSong
 
 	print(outString)
+	print(outString)
+	print(stateColors[status["state"]])
 	
 	c.close()
 except:
 	print(HOST)
+	print(HOST)
+	print("#ff0000")
