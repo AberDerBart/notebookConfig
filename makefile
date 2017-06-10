@@ -1,6 +1,6 @@
-.PHONY: all i3 i3status i3blocks bashrc taskrc scripts launcher ncmpc
+.PHONY: all i3 i3status i3blocks bashrc taskrc scripts launcher ncmpc vimrc
 
-all: i3 i3blocks bashrc taskrc scripts launcher ncmpc
+all: i3 i3blocks bashrc taskrc scripts launcher ncmpc vimrc
 
 i3:
 	mkdir -p ~/.config/i3/
@@ -21,3 +21,5 @@ launcher:
 ncmpc:
 	mkdir -p ~/.ncmpc
 	ln -fs ${PWD}/ncmpcConfig ~/.ncmpc/config
+vimrc:
+	ln -fs ${PWD}/vimrc ~/.vimrc
