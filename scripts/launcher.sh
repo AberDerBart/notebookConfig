@@ -6,7 +6,7 @@ then
 	LAUNCH_TABLE_CUSTOM=""
 else
 	LAUNCH_TABLE=~/.config/launcher.tbl
-	LAUNCH_TABLE_CUSTOM=""
+	LAUNCH_TABLE_CUSTOM=~/.config/launcherCustom.tbl
 fi
 
 
