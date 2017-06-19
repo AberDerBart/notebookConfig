@@ -4,3 +4,4 @@ cancel shutdown	shutdown -c
 reboot	shutdown -r now
 music faultier	bash /home/bart/.software/scripts/setMpdHost.sh faultier
 music panda	bash /home/bart/.software/scripts/setMpdHost.sh panda
+music zu Hause	bash /home/bart/.software/scripts/setMpdHost.sh 192.168.2.13
