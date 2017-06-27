@@ -1,9 +1,11 @@
-.PHONY: all task gui owncloud pulse wifimenu keyring networkmanager ssh python steam thunderbird firefox vim mpdfoo intel-ucode allthinkpad
+.PHONY: all task gui owncloud pulse wifimenu keyring networkmanager ssh python steam thunderbird firefox vim mpdfoo intel-ucode allthinkpad fuck
 
 allthinkpad: intel-ucode all
 
-all: task gui owncloud pulse wifimenu keyring networkmanager ssh python steam thunderbird firefox vim mpdfoo
+all: task gui owncloud pulse wifimenu keyring networkmanager ssh python steam thunderbird firefox vim mpdfoo fuck
 
+fuck:
+	pacman -S thefuck
 task:
 	pacman -S task
 gui:

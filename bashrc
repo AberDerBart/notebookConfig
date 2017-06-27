@@ -21,4 +21,9 @@ then
 	source ~/.mpcrc
 fi
 
+if which fuck
+then
+	eval $(thefuck --alias)	
+fi
+
 task
