@@ -21,7 +21,7 @@ then
 	source ~/.mpcrc
 fi
 
-if which fuck
+if which fuck >/dev/null
 then
 	eval $(thefuck --alias)	
 fi
