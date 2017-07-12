@@ -15,6 +15,7 @@ export EDITOR="vim"
 export BROWSER="firefox"
 export MAILER="thunderbird"
 alias plottool="/usr/bin/python2 /home/bart/.software/plottool/plottool.py"
+alias mailfile="/home/bart/.software/scripts/mailfile.sh"
 
 if [[ -e ~/.mpcrc ]]
 then
