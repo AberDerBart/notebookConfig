@@ -171,6 +171,7 @@ assign [class="telegram-desktop"] 10:comm
 assign [class="Evolution"] 10:comm
 assign [instance="pinboard"] pinboard
 assign [class="Pidgin"] 10:comm
+assign [class="Cutegram"] 10:comm
 
 # bind keys
 
