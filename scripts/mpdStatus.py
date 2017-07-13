@@ -19,8 +19,8 @@ stateDict={"play":u'\u25BA',
 	"pause":u'\u2161',
 	"stop":u'\u25A0'}
 stateColors={"play":"#00ff00",
-	"pause":"#ffbb00",
-	"stop":"#ff0000"}
+	"pause":"#ffff00",
+	"stop":"#ff6600"}
 
 c=mpd.MPDClient()
 
