@@ -206,6 +206,6 @@ bindsym XF86Display exec "arandr"
 # dummys
 bindsym XF86WebCam exec "echo bla"
 bindsym XF86TouchpadToggle exec "echo bla"
-bindsym XF86Battery exec "echo bla"
+bindsym XF86Battery exec "BLOCK_BUTTON=1 bash ~/.software/scripts/keyboard.sh"
 bindsym XF86Suspend exec "echo bla"
 bindsym XF86Sleep exec "i3lock -c 444444"
