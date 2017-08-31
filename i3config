@@ -200,7 +200,7 @@ bindsym XF86AudioRaiseVolume exec "pamixer -i 2"
 bindsym XF86AudioMicMute exec "pamixer --default-source -t"
 
 # system
-bindsym XF86ScreenSaver exec "i3lock -c 000000"
+bindsym XF86ScreenSaver exec "i3lock -c 444444"
 bindsym XF86Display exec "arandr"
 
 # dummys
@@ -208,4 +208,5 @@ bindsym XF86WebCam exec "echo bla"
 bindsym XF86TouchpadToggle exec "echo bla"
 bindsym XF86Battery exec "BLOCK_BUTTON=1 bash ~/.software/scripts/keyboard.sh"
 bindsym XF86Suspend exec "echo bla"
-bindsym XF86Sleep exec "i3lock -c 444444"
+#bindsym XF86Sleep exec "i3lock -c 444444"
+ workspace_layout tabbed
