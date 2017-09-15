@@ -15,6 +15,8 @@ taskrc:
 scripts:
 	mkdir -p ~/.software 
 	ln -fs ${PWD}/scripts ~/.software/
+	mkdir -p ~/.software/bin
+	ln -fs ${PWD}/scripts/wake.sh ~/.software/bin/wake
 launcher:
 	mkdir -p ~/.config
 	ln -fs ${PWD}/launcher.tbl ~/.config

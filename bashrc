@@ -11,6 +11,7 @@ PS1='[\u@\h \W]\$ '
 alias vi=vim
 export VISUAL="vim"
 export EDITOR="vim"
+export PATH=$PATH:/home/bart/.software/bin
 
 export BROWSER="firefox"
 export MAILER="thunderbird"
