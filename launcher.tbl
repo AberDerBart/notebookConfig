@@ -5,5 +5,6 @@ reboot	shutdown -r now
 music faultier	bash /home/bart/.software/scripts/setMpdHost.sh faultier
 music panda	bash /home/bart/.software/scripts/setMpdHost.sh panda
 music zu Hause	bash /home/bart/.software/scripts/setMpdHost.sh 192.168.2.13
+wake todesstern	wol e0:3f:49:15:d8:29
 space auf	ssh auf@192.168.178.6
 space zu	ssh zu@192.168.178.6
