@@ -210,6 +210,4 @@ bindsym XF86Battery exec "BLOCK_BUTTON=1 bash ~/.software/scripts/keyboard.sh"
 bindsym XF86Suspend exec "echo bla"
 bindsym XF86Sleep exec "i3lock -c 444444"
 
-# set default layout
-workspace_layout tabbed
-
+bindsym $mod+Ctrl+l exec "i3lock -c 444444"
