@@ -22,5 +22,4 @@ else
 	echo canceled
 fi
 
-
-
+bash ~/.software/scripts/setBg.sh
