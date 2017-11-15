@@ -11,7 +11,7 @@
 
 exec bash ~/.software/scripts/autostart.sh
 
-hide_edge_borders vertical 
+hide_edge_borders both
 
 set $mod Mod4
 
