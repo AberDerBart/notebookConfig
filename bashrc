@@ -18,6 +18,7 @@ export MAILER="thunderbird"
 export BAHN_ORIGIN="braunschweig"
 alias plottool="/usr/bin/python2 /home/bart/.software/plottool/plottool.py"
 alias mailfile="/home/bart/.software/scripts/mailfile.sh"
+alias araha='task add +uni project:arabisch due:1week'
 
 if [[ -e ~/.mpcrc ]]
 then
