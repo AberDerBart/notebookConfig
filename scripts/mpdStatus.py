@@ -56,4 +56,4 @@ except:
 	print("#ff0000")
 
 if BLOCK_BUTTON == str(1):
-	subprocess.run(["/usr/bin/i3-sensible-terminal", "-e", "ncmpc"])
+	subprocess.run(["/usr/bin/i3-sensible-terminal", "-e", "ncmpc -h "+HOST])
