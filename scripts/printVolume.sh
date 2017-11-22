@@ -9,3 +9,8 @@ VOLUME=$(pamixer --get-volume)%
 echo $VOLUME
 echo $VOLUME
 echo $COLOR
+
+case $BLOCK_BUTTON in
+	1) pavucontrol & ;;
+	*) echo $LAYOUT ;;
+esac
