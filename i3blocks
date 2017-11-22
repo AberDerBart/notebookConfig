@@ -41,6 +41,7 @@ signal=1
 [mpd]
 command=bash -c "source ~/.mpcrc && python ~/.software/scripts/mpdStatus.py"
 interval=5
+signal=2
 
 # Disk usage
 #
@@ -93,7 +94,7 @@ label=♪
 instance=Master
 #instance=PCM
 interval=5
-signal=2
+signal=3
 # Date Time
 #
 [time]
