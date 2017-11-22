@@ -1,9 +1,11 @@
 #!/usr/bin/python
 import mpd
 import os
+import subprocess
 
 HOST="faultier"
 HOST=os.environ["MPD_HOST"]
+BLOCK_BUTTON=os.environ.get("BLOCK_BUTTON","0")
 
 class bcolors:
 	HEADER = '\033[95m'
@@ -32,7 +34,7 @@ try:
 
 	status=c.status()
 
-	if "volume" in status:
+	if status.get("volume","-1") != "-1":
 		outString+=" "+str(status["volume"]+"%")
 
 
@@ -52,3 +54,6 @@ except:
 	print(HOST)
 	print(HOST)
 	print("#ff0000")
+
+if BLOCK_BUTTON == str(1):
+	subprocess.run(["/usr/bin/i3-sensible-terminal", "-e", "ncmpc"])
