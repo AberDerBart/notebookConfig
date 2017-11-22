@@ -36,6 +36,7 @@ markup=none
 [keyboard]
 command=bash -c "bash ~/.software/scripts/keyboard.sh"
 interval=once
+signal=1
 
 [mpd]
 command=bash -c "source ~/.mpcrc && python ~/.software/scripts/mpdStatus.py"
@@ -92,7 +93,7 @@ label=♪
 instance=Master
 #instance=PCM
 interval=5
-signal=10
+signal=2
 # Date Time
 #
 [time]

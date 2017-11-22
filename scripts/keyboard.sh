@@ -14,3 +14,8 @@ case $BLOCK_BUTTON in
 	1) toggleLayout && echo $LAYOUT;;
 	*) echo $LAYOUT ;;
 esac
+
+if [ "$1" = "--kill" ]
+then
+	pkill -RTMIN+1 i3blocks
+fi
