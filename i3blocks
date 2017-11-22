@@ -91,8 +91,7 @@ interval=30
 
 [volume]
 label=♪
-instance=Master
-#instance=PCM
+command=bash -c "bash ~/.software/scripts/printVolume.sh"
 interval=5
 signal=3
 # Date Time
