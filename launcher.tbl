@@ -3,7 +3,7 @@ shutdown timer	bash /home/bart/.software/scripts/shutdownTimer.sh
 cancel shutdown	shutdown -c
 reboot	shutdown -r now
 music faultier	bash /home/bart/.software/scripts/setMpdHost.sh faultier
-music panda	bash /home/bart/.software/scripts/setMpdHost.sh panda
+music relaxo	bash /home/bart/.software/scripts/setMpdHost.sh relaxo
 music zu Hause	bash /home/bart/.software/scripts/setMpdHost.sh 192.168.2.13
 music local	bash /home/bart/.software/scripts/setMpdHost.sh localhost && mpd
 wake todesstern	wol e0:3f:49:15:d8:29
