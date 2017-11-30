@@ -77,7 +77,6 @@ bindsym $mod+v split v
 bindsym $mod+f fullscreen
 
 # change container layout (stacked, tabbed, toggle split)
-bindsym $mod+s layout stacking
 bindsym $mod+w layout tabbed
 bindsym $mod+e layout toggle split
 
@@ -210,4 +209,16 @@ bindsym XF86Battery exec "BLOCK_BUTTON=1 bash ~/.software/scripts/keyboard.sh --
 bindsym XF86Suspend exec "echo bla"
 bindsym XF86Sleep exec "bash ~/.software/scripts/lock.sh"
 
+# non-thinkpad bindings
 bindsym $mod+Ctrl+l exec "bash ~/.software/scripts/lock.sh"
+bindsym $mod+Ctrl+d exec "bash ~/.software/scripts/launcher.sh"
+bindsym $mod+p exec "bash ~/.software/scripts/screen.sh"
+
+bindsym $mod+s mode "sounds"
+
+mode "sounds" {
+	bindsym w exec "aplay ~/.local/sounds/wortwitzklingel.wav"
+        # back to normal: Enter or Escape
+        bindsym Return mode "default"
+        bindsym Escape mode "default"
+}
