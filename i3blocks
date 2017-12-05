@@ -63,6 +63,11 @@ label=IP:
 color=#00FF00
 interval=10
 
+[space]
+label=⌛:
+command=python ~/.software/scripts/spaceState.py
+interval=20
+
 [wifi]
 instance=wlp3s0
 interval=10

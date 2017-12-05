@@ -2,20 +2,21 @@
 import requests
 import json
 
-req=requests.get("https://status.stratum0.org/status.json")
+try:
+	req=requests.get("https://status.stratum0.org/status.json")
+	assert (req.status_code == 200), "wrong reply"
 
-if(req.status_code == 200):
 	spaceState=json.loads(req.text)
 	openState=spaceState["isOpen"]
 	if(openState):
-		print("S0: "+str(spaceState["openedBy"]))
-		print("S0: "+str(spaceState["openedBy"]))
+		print(str(spaceState["openedBy"]))
+		print(str(spaceState["openedBy"]))
 		print("#00ff00")
 	else:
-		print("S0: Closed")
-		print("S0: Closed")
+		print("Closed")
+		print("Closed")
 		print("#ff0000")
-else:
-	print()
-	print()
-	print("#000000")
+	exit(0)
+except Exception as e:
+	print(e)
+	exit(-1)
