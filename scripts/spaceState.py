@@ -18,5 +18,6 @@ try:
 		print("#ff0000")
 	exit(0)
 except Exception as e:
+	print()
 	print(e)
-	exit(-1)
+	exit(0)

@@ -50,10 +50,10 @@ try:
 	print(stateColors[status["state"]])
 	
 	c.close()
-except:
-	print(HOST)
-	print(HOST)
-	print("#ff0000")
+except Exception as e:
+	print()
+	print(e)
+	exit(0)
 
 if BLOCK_BUTTON == str(1):
 	subprocess.Popen(["/usr/bin/i3-sensible-terminal", "-e", "ncmpc -h "+HOST])
