@@ -66,9 +66,10 @@ interval=10
 [space]
 label=⌛:
 command=python ~/.software/scripts/spaceState.py
-interval=20
+interval=120
 
 [wifi]
+label=W:
 instance=wlp3s0
 interval=10
 
@@ -95,7 +96,7 @@ label=⚡
 interval=30
 
 [volume]
-label=♪
+label=♪:
 command=bash -c "bash ~/.software/scripts/printVolume.sh"
 interval=5
 signal=3
