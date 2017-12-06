@@ -42,7 +42,18 @@ try:
 
 	current=c.currentsong()
 	if(len(current)):
-		formattedSong=current["artist"] + " - " + current["album"] + " - " + current["title"]
+		artist=current.get("artist")
+		album=current.get("album")
+		title=current.get("title")
+	
+		formattedSong=current.get("file")
+
+		if title:
+			formattedSong=title
+			if album:
+				formattedSong=album + " - " + formattedSong
+			if artist:
+				formattedSong=artist + " - " + formattedSong
 		outString+=" "+formattedSong
 
 	print(outString)
