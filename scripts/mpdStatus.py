@@ -29,6 +29,11 @@ try:
 	outString=HOST
 
 	c.connect(HOST,6600)
+
+	if BLOCK_BUTTON == str(3):
+		subprocess.Popen(["/usr/bin/i3-sensible-terminal", "-e", "ncmpc -h "+HOST])
+	if BLOCK_BUTTON == str(1):
+		c.pause()
 	
 
 	status=c.status()
@@ -58,6 +63,7 @@ try:
 	print(outString)
 	print(outString)
 	print(stateColors[status["state"]])
+
 	
 	c.close()
 except Exception as e:
@@ -65,5 +71,3 @@ except Exception as e:
 	print(e)
 	exit(0)
 
-if BLOCK_BUTTON == str(1):
-	subprocess.Popen(["/usr/bin/i3-sensible-terminal", "-e", "ncmpc -h "+HOST])
