@@ -3,8 +3,7 @@ import mpd
 import os
 import subprocess
 
-HOST="faultier"
-HOST=os.environ["MPD_HOST"]
+HOST=os.environ.get("MPD_HOST","localhost")
 BLOCK_BUTTON=os.environ.get("BLOCK_BUTTON","0")
 
 class bcolors:
