@@ -33,7 +33,10 @@ try:
 	if BLOCK_BUTTON == str(3):
 		subprocess.Popen(["/usr/bin/i3-sensible-terminal", "-e", "ncmpc -h "+HOST])
 	if BLOCK_BUTTON == str(1):
-		c.pause()
+		if (c.status()['state'] == 'stop'):
+			c.play()
+		else:
+			c.pause()
 	
 
 	status=c.status()
