@@ -31,4 +31,6 @@ then
 	eval $(thefuck --alias)	
 fi
 
+eval "$(fasd --init bash-hook posix-alias)"
+
 task

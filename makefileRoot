@@ -2,7 +2,7 @@
 
 allthinkpad: intel-ucode all
 
-all: task gui owncloud pulse wifimenu keyring networkmanager ssh python steam thunderbird firefox vim mpdfoo fuck
+all: task gui owncloud pulse wifimenu keyring networkmanager ssh python steam thunderbird firefox vim mpdfoo fuck fasd
 
 fuck:
 	pacman -S thefuck
@@ -42,3 +42,5 @@ vim:
 mpdfoo:
 	pacman -S mpc ncmpc
 	pip install python-mpd2
+fasd:
+	pacman -S fasd
