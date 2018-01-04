@@ -217,8 +217,14 @@ bindsym $mod+p exec "bash ~/.software/scripts/screen.sh"
 bindsym $mod+s mode "sounds"; exec "bash ~/.software/scripts/pamixer.sh -u"
 
 mode "sounds" {
-	bindsym w exec "aplay ~/.local/sounds/wortwitzklingel.wav"
-	bindsym d exec "aplay ~/.local/sounds/doorbell.wav"
+	bindsym w exec "paplay ~/.local/sounds/wortwitzklingel.wav"
+	bindsym d exec "paplay ~/.local/sounds/doorbell.wav"
+	bindsym a exec "paplay ~/.local/sounds/anno_alk.wav"
+	bindsym b exec "paplay ~/.local/sounds/anno_baumaterial.wav"
+	bindsym p exec "paplay ~/.local/sounds/anno_prozessor.wav"
+	bindsym h exec "paplay ~/.local/sounds/anno_hunger.wav"
+	bindsym k exec "paplay ~/.local/sounds/anno_kontor.wav"
+	bindsym v exec "paplay ~/.local/sounds/anno_versagt.wav"
         # back to normal: Enter or Escape
         bindsym Return mode "default"
         bindsym Escape mode "default"
