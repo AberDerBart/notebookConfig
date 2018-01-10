@@ -2,6 +2,8 @@
 import mpd
 import os
 import subprocess
+import socket
+from parse import parse
 
 HOST=os.environ.get("MPD_HOST","localhost")
 BLOCK_BUTTON=os.environ.get("BLOCK_BUTTON","0")
@@ -23,10 +25,23 @@ stateColors={"play":"#00ff00",
 	"pause":"#ffff00",
 	"stop":"#ff6600"}
 
+def getRemoteHost():
+	try:
+		clientsocket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+		clientsocket.connect(('localhost', 6602))
+		clientsocket.send(b'\n')
+		
+		reply=clientsocket.recv(4096).decode('utf-8')
+	
+		return parse('{host}:{}',reply)['host']
+	except:
+		return 'HOST?!'
+
 c=mpd.MPDClient()
 
 try:
 	outString=HOST
+	outString=getRemoteHost()
 
 	c.connect(HOST,6600)
 
@@ -70,7 +85,8 @@ try:
 	
 	c.close()
 except Exception as e:
-	print()
+	print(getRemoteHost())
 	print(e)
+	print('#ff0000')
 	exit(0)
 
