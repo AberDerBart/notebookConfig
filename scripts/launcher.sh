@@ -18,7 +18,7 @@ then
 	COMMAND=`cat $LAUNCH_TABLE $LAUNCH_TABLE_CUSTOM | grep -P "^$CHOICE\t" | cut -f 2`
 
 	echo "Launching $COMMAND"
-	$COMMAND
+	eval $COMMAND
 else
 	echo "Aborted"
 fi
