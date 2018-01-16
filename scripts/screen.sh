@@ -1,6 +1,6 @@
 #!/bin/bash
 DISPLAYS=$(xrandr|grep " connected"|cut -d " " -f 1) 
-ACTIVE=$(xrandr|grep " connected"|grep [0-9]*x[0-9]*+[0-9]*+[0-9]*|cut -d " " -f 1)
+ACTIVE=$(xrandr|grep " connected"|grep "[0-9]*x[0-9]*+[0-9]*+[0-9]*"|cut -d " " -f 1)
 
 NUMBER=$(echo $DISPLAYS|wc -w)
 
