@@ -6,17 +6,8 @@ NUMBER=$(echo $DISPLAYS|wc -w)
 
 if [[ "$NUMBER" == "1" ]]
 then
-	if [[ $ACTIVE ]]
-	then
-		#xrandr --output $DISPLAYS --off
-		#echo "turning $DISPLAYS off"
-		echo "enabling screensaver"
-		sleep .5
-		xdg-screensaver activate
-	#else
-		#xrandr --output $DISPLAYS --auto
-		#echo "turning $DISPLAYS on"
-	fi
+	echo autoconfiguring displays
+	xrandr --auto
 else
 	if SELECTED=$(echo $DISPLAYS|tr -s " " "\n"|dmenu -i)
 	then
