@@ -217,7 +217,7 @@ bindsym $mod+p exec "bash ~/.software/scripts/screen.sh"
 bindsym $mod+s mode "sounds"; exec "bash ~/.software/scripts/pamixer.sh -u"
 
 mode "sounds" {
-	bindsym w exec "paplay ~/.local/sounds/wortwitzklingel.wav"
+	bindsym w exec "paplay ~/.local/sounds/wortwitzklingel.flac"
 	bindsym d exec "paplay ~/.local/sounds/proprietary/doorbell.wav"
 	bindsym a exec "paplay ~/.local/sounds/proprietary/anno_alk.wav"
 	bindsym b exec "paplay ~/.local/sounds/proprietary/anno_baumaterial.wav"
