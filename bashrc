@@ -21,6 +21,7 @@ alias mailfile="/home/bart/.software/scripts/mailfile.sh"
 alias araha='task add +uni project:arabisch due:1week'
 alias mpw='/home/bart/.software/mpw/mpw.py'
 alias maxima='rlwrap maxima'
+alias foto='fswebcam -r 1920x1080 /home/bart/tmp/foto.png'
 
 if [[ -e ~/.mpcrc ]]
 then

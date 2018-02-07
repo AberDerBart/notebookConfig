@@ -200,7 +200,7 @@ bindsym XF86AudioMicMute exec "bash ~/.software/scripts/pamixer.sh --default-sou
 
 # system
 bindsym XF86ScreenSaver exec "bash ~/.software/scripts/lock.sh"
-bindsym XF86Display exec "bash ~/.software/scripts/screen.sh"
+bindsym XF86Display exec "bash ~/.software/scripts/blank.sh"
 
 # dummys
 bindsym XF86WebCam exec "echo bla"
