@@ -11,6 +11,8 @@ echo $VOLUME
 echo $COLOR
 
 case $BLOCK_BUTTON in
-	1) pavucontrol & ;;
+	3) pavucontrol & ;;
+	4) pamixer -i2 ;;
+	5) pamixer -d2 ;;
 	*) ;;
 esac
