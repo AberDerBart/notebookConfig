@@ -188,11 +188,10 @@ bindsym XF86AudioNext exec "bash ~/.software/scripts/mpc.sh next"
 bindsym XF86AudioPlay exec "bash ~/.software/scripts/mpc.sh toggle"
 bindsym XF86AudioPrev exec "bash ~/.software/scripts/mpc.sh prev"
 bindsym XF86AudioStop exec "bash ~/.software/scripts/mpc.sh stop"
-
-# mpd volume
 bindsym $mod+XF86AudioLowerVolume exec "bash ~/.software/scripts/mpc.sh volume -1"
 bindsym $mod+XF86AudioRaiseVolume exec "bash ~/.software/scripts/mpc.sh volume +1"
 
+# audio
 bindsym XF86AudioMute exec "bash ~/.software/scripts/pamixer.sh -t"
 bindsym XF86AudioLowerVolume exec "bash ~/.software/scripts/pamixer.sh -d 2"
 bindsym XF86AudioRaiseVolume exec "bash ~/.software/scripts/pamixer.sh -i 2"
