@@ -12,7 +12,6 @@ alias vi=vim
 export VISUAL="vim"
 export EDITOR="vim"
 export PATH=$PATH:/home/bart/.software/bin
-
 export BROWSER="firefox"
 export MAILER="thunderbird"
 export BAHN_ORIGIN="braunschweig"
@@ -33,6 +32,6 @@ then
 	eval $(thefuck --alias)	
 fi
 
-eval "$(fasd --init bash-hook posix-alias)"
+. /usr/share/autojump/autojump.bash
 
 task
