@@ -213,10 +213,12 @@ bindsym $mod+Ctrl+l exec "bash ~/.software/scripts/lock.sh"
 bindsym $mod+Ctrl+d exec "bash ~/.software/scripts/launcher.sh"
 bindsym $mod+p exec "bash ~/.software/scripts/screen.sh"
 
-bindsym $mod+s mode "sounds"; exec "bash ~/.software/scripts/pamixer.sh -u"
+# sounds!
+bindsym $mod+s mode "sounds"; exec "bash ~/.software/scripts/pamixer.sh -u --set-volume 100"
 
 mode "sounds" {
 	bindsym w exec "paplay ~/.local/sounds/wortwitzklingel.flac"
+	bindsym m exec "paplay ~/.local/sounds/legnilkztiwtrow.wav"
 	bindsym d exec "paplay ~/.local/sounds/proprietary/doorbell.wav"
 	bindsym a exec "paplay ~/.local/sounds/proprietary/anno_alk.wav"
 	bindsym b exec "paplay ~/.local/sounds/proprietary/anno_baumaterial.wav"
@@ -224,6 +226,7 @@ mode "sounds" {
 	bindsym h exec "paplay ~/.local/sounds/proprietary/anno_hunger.wav"
 	bindsym k exec "paplay ~/.local/sounds/proprietary/anno_kontor.wav"
 	bindsym v exec "paplay ~/.local/sounds/proprietary/anno_versagt.wav"
+	bindsym o exec "paplay ~/.local/sounds/proprietary/ohmygoditsburning.flac"
         # back to normal: Enter or Escape
         bindsym Return mode "default"
         bindsym Escape mode "default"
