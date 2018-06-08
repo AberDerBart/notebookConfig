@@ -65,7 +65,7 @@ interval=10
 
 [space]
 label=⌛:
-command=python ~/.software/scripts/spaceState.py
+command=bash -c "python ~/.software/scripts/spaceState.py"
 interval=120
 
 [wifi]
