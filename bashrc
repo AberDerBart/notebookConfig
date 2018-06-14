@@ -14,10 +14,8 @@ export EDITOR="vim"
 export PATH=$PATH:/home/bart/.software/bin
 export BROWSER="firefox"
 export MAILER="thunderbird"
-export BAHN_ORIGIN="braunschweig"
 alias plottool="/usr/bin/python2 /home/bart/.software/plottool/plottool.py"
 alias mailfile="/home/bart/.software/scripts/mailfile.sh"
-alias araha='task add +uni project:arabisch due:1week'
 alias mpw='/home/bart/.software/mpw/mpw.py'
 alias maxima='rlwrap maxima'
 alias foto='fswebcam -r 1920x1080 /home/bart/tmp/foto.png'
@@ -34,4 +32,4 @@ fi
 
 . /usr/share/autojump/autojump.bash
 
-task
+task -freizeit
