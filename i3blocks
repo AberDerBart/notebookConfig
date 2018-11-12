@@ -64,8 +64,8 @@ color=#00FF00
 interval=10
 
 [space]
-label=⌛:
-command=bash -c "python ~/.software/scripts/spaceState.py"
+label=s0:
+command=bash -c "python ~/.software/scripts/spaceState.py|tee ~/spaceState.log"
 interval=120
 
 [wifi]

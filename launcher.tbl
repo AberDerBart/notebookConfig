@@ -2,7 +2,7 @@ shutdown	shutdown -h now
 shutdown timer	bash /home/bart/.software/scripts/shutdownTimer.sh
 cancel shutdown	shutdown -c
 reboot	shutdown -r now
-music faultier	echo faultier:6600     |nc localhost 6602
+music enton	echo enton:6600     |nc localhost 6602
 music relaxo	echo relaxo:6600       |nc localhost 6602
 music zu Hause	echo 192.168.2.13:6600 |nc localhost 6602
 music local	echo localhost:6601    |nc localhost 6602
