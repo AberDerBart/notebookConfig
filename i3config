@@ -163,6 +163,7 @@ workspace_auto_back_and_forth yes
 assign [class="Icedove"] 10:comm
 assign [class="Thunderbird"] 10:comm
 assign [class="Ario"] 9:music
+assign [class="cantata"] 9:music
 assign [instance="music"] 9:music
 assign [class="Telegram"] 10:comm
 assign [class="telegram"] 10:comm
