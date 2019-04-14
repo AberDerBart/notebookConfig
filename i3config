@@ -217,6 +217,10 @@ bindsym $mod+p exec "bash ~/.software/scripts/screen.sh"
 # sounds!
 bindsym $mod+s mode "sounds"; exec "bash ~/.software/scripts/pamixer.sh -u --set-volume 100"
 
+# custom workspaces
+bindsym $mod+Tab exec "i3-msg workspace $(i3-msg -t get_workspaces|jq -r .[].name|dmenu)"
+bindsym $mod+Shift+Tab exec "i3-msg move container to workspace $(i3-msg -t get_workspaces|jq -r .[].name|dmenu)"
+
 mode "sounds" {
 	bindsym w exec "paplay ~/.local/sounds/wortwitzklingel.flac"
 	bindsym m exec "paplay ~/.local/sounds/legnilkztiwtrow.wav"
