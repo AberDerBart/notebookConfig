@@ -39,7 +39,7 @@ interval=once
 signal=1
 
 [mpd]
-command=bash -c "python ~/.software/scripts/mpdStatus.py"
+command=bash -c "source ~/.mpcrc && python ~/.software/scripts/mpdStatus.py"
 interval=5
 signal=2
 
