@@ -153,6 +153,7 @@ bindsym $mod+r mode "resize"
 # finds out, if available)
 bar {
         #status_command bash ~/ownCloud/scripts/customStatus.sh
+        #status_command i3status
         status_command i3blocks
 }
 
