@@ -20,7 +20,6 @@ alias mailfile="/home/bart/.software/scripts/mailfile.sh"
 alias mpw='/home/bart/.software/mpw/mpw.py'
 alias maxima='rlwrap maxima'
 alias foto='fswebcam -r 1920x1080 /home/bart/tmp/foto.png'
-alias shop='shoppinglist'
 alias mkpw='/home/bart/programming/c/mkpw/mkpw -c /home/bart/programming/c/mkpw/dict.txt'
 alias vsync='vdirsyncer sync'
 alias mensa='/home/bart/.software/canteenaband/mensa -m vet'
@@ -36,5 +35,7 @@ then
 fi
 
 . /usr/share/autojump/autojump.bash
+
+source ~/.bash_completion.d/python-argcomplete.sh
 
 task -freizeit
