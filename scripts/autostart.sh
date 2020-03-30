@@ -1,4 +1,4 @@
 #!/bin/bash
-owncloud &
+nextcloud &
 nm-applet &
 bash ~/.config/notebookConfig/scripts/setBg.sh
