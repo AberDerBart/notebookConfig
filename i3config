@@ -238,6 +238,7 @@ mode "sounds" {
 	bindsym k exec "paplay ~/.local/sounds/proprietary/anno_kontor.wav"
 	bindsym v exec "paplay ~/.local/sounds/proprietary/anno_versagt.wav"
 	bindsym o exec "paplay ~/.local/sounds/proprietary/ohmygoditsburning.flac"
+	bindsym g exec "paplay ~/.local/sounds/proprietary/daswargut.wav"
         # back to normal: Enter or Escape
         bindsym Return mode "default"
         bindsym Escape mode "default"
