@@ -9,7 +9,7 @@
 #
 # Please see http://i3wm.org/docs/userguide.html for a complete reference!
 
-exec bash ~/.software/scripts/autostart.sh
+exec bash ~/.local/bin/scripts/autostart.sh
 
 hide_edge_borders both
 
@@ -121,7 +121,7 @@ bindsym $mod+Shift+c reload
 # restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
 bindsym $mod+Shift+r restart
 # exit i3 (logs you out of your X session)
-bindsym $mod+Shift+e exec "lxdm -c USER_SWITCH"
+bindsym $mod+Shift+e exec "dm-tool switch-to-greeter"
 bindsym $mod+Ctrl+Shift+e exec i3-msg exit
 
 # resize window (you can also use the mouse for that)
@@ -183,46 +183,47 @@ assign [instance="WhatsApp"] 10:comm
 # bind keys
 
 # launchers
-bindsym XF86Launch1 exec "bash ~/.software/scripts/launcher.sh"
-bindsym $mod+Shift+d exec "bash ~/.software/scripts/runFileParam.sh"
+bindsym XF86Launch1 exec "bash ~/.local/bin/scripts/launcher.sh"
+bindsym $mod+Shift+d exec "bash ~/.local/bin/scripts/runFileParam.sh"
 
 # applications
 bindsym $mod+b exec "firefox"
 bindsym $mod+m exec "thunderbird"
 
 # mpd
-bindsym XF86AudioNext exec "bash ~/.software/scripts/mpc.sh next"
-bindsym XF86AudioPlay exec "bash ~/.software/scripts/mpc.sh toggle"
-bindsym XF86AudioPrev exec "bash ~/.software/scripts/mpc.sh prev"
-bindsym XF86AudioStop exec "bash ~/.software/scripts/mpc.sh stop"
-bindsym $mod+XF86AudioLowerVolume exec "bash ~/.software/scripts/mpc.sh volume -1"
-bindsym $mod+XF86AudioRaiseVolume exec "bash ~/.software/scripts/mpc.sh volume +1"
+bindsym XF86AudioNext exec "bash ~/.local/bin/scripts/mpc.sh next"
+bindsym XF86AudioPlay exec "bash ~/.local/bin/scripts/mpc.sh toggle"
+bindsym XF86AudioPrev exec "bash ~/.local/bin/scripts/mpc.sh prev"
+bindsym XF86AudioStop exec "bash ~/.local/bin/scripts/mpc.sh stop"
+bindsym $mod+XF86AudioLowerVolume exec "bash ~/.local/bin/scripts/mpc.sh volume -1"
+bindsym $mod+XF86AudioRaiseVolume exec "bash ~/.local/bin/scripts/mpc.sh volume +1"
 
-# audio
-bindsym XF86AudioMute exec "bash ~/.software/scripts/pamixer.sh -t"
-bindsym XF86AudioLowerVolume exec "bash ~/.software/scripts/pamixer.sh -d 2"
-bindsym XF86AudioRaiseVolume exec "bash ~/.software/scripts/pamixer.sh -i 2"
-bindsym XF86AudioMicMute exec "bash ~/.software/scripts/pamixer.sh --default-source -t"
+# Use pactl to adjust volume in PulseAudio.
+# set $refresh_i3status killall -SIGUSR1 i3status
+set $refresh_i3blocks_audio pkill -RTMIN+3 i3blocks
+bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ +10% && $refresh_i3blocks_audio
+bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ -10% && $refresh_i3blocks_audio
+bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute @DEFAULT_SINK@ toggle && $refresh_i3blocks_audio
+bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute @DEFAULT_SOURCE@ toggle && $refresh_i3blocks_audio
 
 # system
-bindsym XF86ScreenSaver exec "bash ~/.software/scripts/lock.sh"
-bindsym XF86Display exec "bash ~/.software/scripts/blank.sh"
+bindsym XF86ScreenSaver exec "bash ~/.local/bin/scripts/lock.sh"
+bindsym XF86Display exec "bash ~/.local/bin/scripts/blank.sh"
 
 # dummys
 bindsym XF86WebCam exec "echo bla"
 bindsym XF86TouchpadToggle exec "echo bla"
-bindsym XF86Battery exec "BLOCK_BUTTON=1 bash ~/.software/scripts/keyboard.sh --kill"
+bindsym XF86Battery exec "BLOCK_BUTTON=1 bash ~/.local/bin/scripts/keyboard.sh --kill"
 bindsym XF86Suspend exec "echo bla"
-bindsym XF86Sleep exec "bash ~/.software/scripts/lock.sh"
+bindsym XF86Sleep exec "bash ~/.local/bin/scripts/lock.sh"
 
 # non-thinkpad bindings
-bindsym $mod+Ctrl+l exec "bash ~/.software/scripts/lock.sh"
-bindsym $mod+Ctrl+d exec "bash ~/.software/scripts/launcher.sh"
-bindsym $mod+p exec "bash ~/.software/scripts/screen.sh"
+bindsym $mod+Ctrl+l exec "bash ~/.local/bin/scripts/lock.sh"
+bindsym $mod+Ctrl+d exec "bash ~/.local/bin/scripts/launcher.sh"
+bindsym $mod+p exec "bash ~/.local/bin/scripts/screen.sh"
 
 # sounds!
-bindsym $mod+s mode "sounds"; exec "bash ~/.software/scripts/pamixer.sh -u --set-volume 100"
-
+bindsym $mod+s mode "sounds"; exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ 60%; exec --no-startup-id pactl set-sink-mute @DEFAULT_SINK@ 0; refresh_i3blocks_audio
 # custom workspaces
 bindsym $mod+Tab exec "i3-msg workspace $(i3-msg -t get_workspaces|jq -r .[].name|dmenu)"
 bindsym $mod+Shift+Tab exec "i3-msg move container to workspace $(i3-msg -t get_workspaces|jq -r .[].name|dmenu)"

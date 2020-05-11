@@ -34,7 +34,7 @@ then
 	eval $(thefuck --alias)	
 fi
 
-. /usr/share/autojump/autojump.bash
+. ~/.nix-profile/share/autojump/autojump.bash
 
 source ~/.bash_completion.d/python-argcomplete.sh
 

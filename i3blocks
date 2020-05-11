@@ -34,12 +34,12 @@ markup=none
 # The second parameter overrides the mixer selection
 # See the script for details.
 [keyboard]
-command=bash -c "bash ~/.software/scripts/i3blocks/keyboard.sh"
+command=bash -c "bash ~/.local/bin/scripts/i3blocks/keyboard.sh"
 interval=once
 signal=1
 
 [mpd]
-command=bash -c "source ~/.mpcrc && python ~/.software/scripts/i3blocks/mpdStatus.py"
+command=bash -c "source ~/.mpcrc && python ~/.local/bin/scripts/i3blocks/mpdStatus.py"
 interval=5
 signal=2
 
@@ -49,7 +49,7 @@ signal=2
 # The script may be called with a optional argument to set the alert
 # (defaults to 10 for 10%).
 [disk]
-command=bash -c "bash ~/.software/scripts/i3blocks/df.sh"
+command=bash -c "bash ~/.local/bin/scripts/i3blocks/df.sh"
 label=disk 
 #instance=/mnt/data
 interval=30
@@ -66,7 +66,7 @@ interval=10
 
 [space]
 label=s0:
-command=bash -c "python ~/.software/scripts/i3blocks/spaceState.py|tee ~/spaceState.log"
+command=bash -c "python ~/.local/bin/scripts/i3blocks/spaceState.py"
 interval=120
 
 [wifi]
@@ -92,14 +92,14 @@ interval=10
 # The battery instance defaults to 0.
 [battery]
 #label=BAT
-command=bash -c "bash ~/.software/scripts/i3blocks/acpi.sh"
+command=bash -c "bash ~/.local/bin/scripts/i3blocks/acpi.sh"
 label=⚡ 
 #instance=1
 interval=30
 
 [volume]
 label=♪:
-command=bash -c "bash ~/.software/scripts/i3blocks/printVolume.sh"
+command=bash -c "bash ~/.local/bin/scripts/i3blocks/printVolume.sh"
 interval=5
 signal=3
 # Date Time
