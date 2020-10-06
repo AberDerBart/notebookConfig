@@ -218,6 +218,7 @@ bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute @DEFAULT_SOU
 # system
 bindsym XF86ScreenSaver exec "bash ~/.local/bin/scripts/lock.sh"
 bindsym XF86Display exec "autorandr --change && feh --bg-fill ~/.background-image"
+bindsym Ctrl+XF86Display exec "bash ~/.local/bin/scripts/editScreen.sh && feh --bg-fill ~/.background-image"
 
 # dummys
 bindsym XF86WebCam exec "echo bla"
