@@ -39,7 +39,7 @@ interval=once
 signal=1
 
 [mpd]
-command=bash -c "source ~/.mpcrc && python ~/.local/bin/scripts/i3blocks/mpdStatus.py"
+command=bash -c "python ~/.local/bin/scripts/i3blocks/mpdStatus.py"
 interval=5
 signal=2
 
@@ -56,23 +56,24 @@ interval=30
 
 # Network interface monitoring
 #
+#
 # If the instance is not specified, use the interface used for default route.
 # The address can be forced to IPv4 or IPv6 with -4 or -6 switches.
-[iface]
-label=IP:
+#[iface]
+#label=IP:
 #instance=wlan0
-color=#00FF00
-interval=10
+#color=#00FF00
+#interval=10
 
 [space]
 label=s0:
 command=bash -c "python ~/.local/bin/scripts/i3blocks/spaceState.py"
 interval=120
 
-[wifi]
-label=W:
-instance=wlp3s0
-interval=10
+#[wifi]
+#label=W:
+#instance=wlp3s0
+#interval=10
 
 # CPU usage
 #
