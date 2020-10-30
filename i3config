@@ -179,8 +179,17 @@ assign [class="web.whatsapp.com"] 10:comm
 assign [instance="web.whatsapp.com"] 10:comm
 assign [class="WhatsApp"] 10:comm
 assign [instance="WhatsApp"] 10:comm
+assign [class="Mail"] 10:comm
+assign [class="Daily"] 10:comm
+assign [class="SshAskpass"] weg
 
 # bind keys
+
+# move output
+bindsym $mod+Ctrl+Up move workspace to output up
+bindsym $mod+Ctrl+Down move workspace to output down
+bindsym $mod+Ctrl+Left move workspace to output left
+bindsym $mod+Ctrl+Right move workspace to output right
 
 # launchers
 bindsym XF86Launch1 exec "bash ~/.local/bin/scripts/launcher.sh"
@@ -209,6 +218,7 @@ bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute @DEFAULT_SOU
 # system
 bindsym XF86ScreenSaver exec "bash ~/.local/bin/scripts/lock.sh"
 bindsym XF86Display exec "autorandr --change && feh --bg-fill ~/.background-image"
+bindsym Ctrl+XF86Display exec "bash ~/.local/bin/scripts/editScreen.sh && feh --bg-fill ~/.background-image"
 bindsym XF86MonBrightnessUp exec "brightnessctl s +10%"
 bindsym XF86MonBrightnessDown exec "brightnessctl s 10%-"
 bindsym XF86Favorites exec "bash ~/.local/bin/scripts/launcher.sh"
