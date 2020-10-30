@@ -135,7 +135,7 @@ mode "resize" {
         bindsym j resize shrink width 10 px or 10 ppt
         bindsym k resize grow height 10 px or 10 ppt
         bindsym l resize shrink height 10 px or 10 ppt
-        bindsym odiaeresis resize grow width 10 px or 10 ppt
+        bindsym semicolon resize grow width 10 px or 10 ppt
 
         # same bindings, but for the arrow keys
         bindsym Left resize shrink width 10 px or 10 ppt
@@ -208,13 +208,13 @@ bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute @DEFAULT_SOU
 
 # system
 bindsym XF86ScreenSaver exec "bash ~/.local/bin/scripts/lock.sh"
-bindsym XF86Display exec "bash ~/.local/bin/scripts/blank.sh"
+bindsym XF86Display exec "autorandr --change && feh --bg-fill ~/.background-image"
+bindsym XF86MonBrightnessUp exec "brightnessctl s +10%"
+bindsym XF86MonBrightnessDown exec "brightnessctl s 10%-"
+bindsym XF86Favorites exec "bash ~/.local/bin/scripts/launcher.sh"
+bindsym XF86Tools exec "bash ~/.local/bin/scripts/keyboard_backlight.sh"
 
 # dummys
-bindsym XF86WebCam exec "echo bla"
-bindsym XF86TouchpadToggle exec "echo bla"
-bindsym XF86Battery exec "BLOCK_BUTTON=1 bash ~/.local/bin/scripts/keyboard.sh --kill"
-bindsym XF86Suspend exec "echo bla"
 bindsym XF86Sleep exec "bash ~/.local/bin/scripts/lock.sh"
 
 # non-thinkpad bindings
@@ -234,12 +234,15 @@ mode "sounds" {
 	bindsym d exec "paplay ~/.local/sounds/proprietary/doorbell.wav"
 	bindsym a exec "paplay ~/.local/sounds/proprietary/anno_alk.wav"
 	bindsym b exec "paplay ~/.local/sounds/proprietary/anno_baumaterial.wav"
+	bindsym c exec "paplay ~/.local/sounds/proprietary/chicken.wav"
 	bindsym p exec "paplay ~/.local/sounds/proprietary/anno_prozessor.wav"
 	bindsym h exec "paplay ~/.local/sounds/proprietary/anno_hunger.wav"
 	bindsym k exec "paplay ~/.local/sounds/proprietary/anno_kontor.wav"
 	bindsym v exec "paplay ~/.local/sounds/proprietary/anno_versagt.wav"
+    bindsym n exec "paplay ~/.local/sounds/proprietary/computer_sagt_nein.wav"
 	bindsym o exec "paplay ~/.local/sounds/proprietary/ohmygoditsburning.flac"
 	bindsym g exec "paplay ~/.local/sounds/proprietary/daswargut.wav"
+	bindsym y exec "paplay ~/.local/sounds/proprietary/yipyipyip_cannibal.wav"
         # back to normal: Enter or Escape
         bindsym Return mode "default"
         bindsym Escape mode "default"
