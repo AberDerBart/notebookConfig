@@ -197,6 +197,9 @@ bindsym $mod+Shift+d exec "bash ~/.local/bin/scripts/runFileParam.sh"
 
 # applications
 bindsym $mod+b exec "firefox"
+bindsym $mod+Shift+b exec "firefox -P Dev"
+bindsym $mod+Ctrl+b exec "chromium"
+bindsym $mod+Ctrl+Shift+b exec "chromium --user-data-dir=$HOME/.config/chromium-dev"
 bindsym $mod+m exec "thunderbird"
 
 # mpd
@@ -218,11 +221,13 @@ bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute @DEFAULT_SOU
 # system
 bindsym XF86ScreenSaver exec "bash ~/.local/bin/scripts/lock.sh"
 bindsym XF86Display exec "autorandr --change && feh --bg-fill ~/.background-image"
+bindsym Shift+XF86Display exec "autorandr -l mobile && feh --bg-fill ~/.background-image"
 bindsym Ctrl+XF86Display exec "bash ~/.local/bin/scripts/editScreen.sh && feh --bg-fill ~/.background-image"
 bindsym XF86MonBrightnessUp exec "brightnessctl s +10%"
 bindsym XF86MonBrightnessDown exec "brightnessctl s 10%-"
 bindsym XF86Favorites exec "bash ~/.local/bin/scripts/launcher.sh"
 bindsym XF86Tools exec "bash ~/.local/bin/scripts/keyboard_backlight.sh"
+bindsym Print exec "flameshot gui"
 
 # dummys
 bindsym XF86Sleep exec "bash ~/.local/bin/scripts/lock.sh"
