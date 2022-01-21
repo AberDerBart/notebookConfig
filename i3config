@@ -243,6 +243,7 @@ bindsym $mod+s mode "sounds"; exec --no-startup-id pactl set-sink-volume @DEFAUL
 # custom workspaces
 bindsym $mod+Tab exec "i3-msg workspace $(i3-msg -t get_workspaces|jq -r .[].name|dmenu)"
 bindsym $mod+Shift+Tab exec "i3-msg move container to workspace $(i3-msg -t get_workspaces|jq -r .[].name|dmenu)"
+bindsym $mod+Ctrl+Tab exec "i3-msg rename workspace to $(dmenu < /dev/null)"
 
 mode "sounds" {
 	bindsym w exec "paplay ~/.local/sounds/wortwitzklingel.flac"
