@@ -6,4 +6,5 @@ space zu	ssh zu@192.168.178.6
 enable screensaver	xset s off -dpms
 disable screensaver	xset s on +dpms
 blank screen	sleep .5 && xdg-screensaver activate
+minecraft	nix-shell -I nixpkgs=channel:nixos-unstable -p minecraft --command minecraft-launcher
 whatsapp	chromium --app=https://web.whatsapp.com

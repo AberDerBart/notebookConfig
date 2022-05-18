@@ -12,7 +12,7 @@ alias vi=vim
 export TERMINAL=lxterminal
 export VISUAL="vim"
 export EDITOR="vim"
-export PATH=$PATH:/home/bart/.software/bin:/home/bart/.local/bin
+export PATH=$PATH:/home/bart/.software/bin:/home/bart/.local/bin:/home/bart/.go/bin
 export BROWSER="firefox"
 export MAILER="thunderbird"
 export GOPATH=~/.go
@@ -40,8 +40,4 @@ fi
 
 eval "$(direnv hook bash)"
 
-. ~/.nix-profile/share/autojump/autojump.bash
-
-source ~/.bash_completion.d/python-argcomplete.sh
-
-task -freizeit
+. /nix/store/in2bj9cnjjfnr6k2cv9n75d4bigh77y2-autojump-22.5.3/share/autojump/autojump.bash

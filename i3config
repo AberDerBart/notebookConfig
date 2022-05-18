@@ -103,6 +103,7 @@ bindsym $mod+7 workspace 7
 bindsym $mod+8 workspace 8:procrastination
 bindsym $mod+9 workspace 9:music
 bindsym $mod+0 workspace 10:comm
+bindsym $mod+y workspace video
 
 # move focused container to workspace
 bindsym $mod+Shift+1 move container to workspace 1
@@ -115,6 +116,7 @@ bindsym $mod+Shift+7 move container to workspace 7
 bindsym $mod+Shift+8 move container to workspace 8:procrastination
 bindsym $mod+Shift+9 move container to workspace 9:music
 bindsym $mod+Shift+0 move container to workspace 10:comm
+bindsym $mod+Shift+y move container to workspace video
 
 # reload the configuration file
 bindsym $mod+Shift+c reload
@@ -239,7 +241,7 @@ bindsym $mod+Ctrl+d exec "bash ~/.local/bin/scripts/launcher.sh"
 bindsym $mod+p exec "bash ~/.local/bin/scripts/screen.sh"
 
 # sounds!
-bindsym $mod+s mode "sounds"; exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ 60%; exec --no-startup-id pactl set-sink-mute @DEFAULT_SINK@ 0; refresh_i3blocks_audio
+bindsym $mod+s mode "sounds"
 # custom workspaces
 bindsym $mod+Tab exec "i3-msg workspace $(i3-msg -t get_workspaces|jq -r .[].name|dmenu)"
 bindsym $mod+Shift+Tab exec "i3-msg move container to workspace $(i3-msg -t get_workspaces|jq -r .[].name|dmenu)"
@@ -252,15 +254,16 @@ mode "sounds" {
 	bindsym a exec "paplay ~/.local/sounds/proprietary/anno_alk.wav"
 	bindsym b exec "paplay ~/.local/sounds/proprietary/anno_baumaterial.wav"
 	bindsym c exec "paplay ~/.local/sounds/proprietary/chicken.wav"
+  bindsym f exec "paplay ~/.local/sounds/fett_vergessen.wav"
 	bindsym p exec "paplay ~/.local/sounds/proprietary/anno_prozessor.wav"
 	bindsym h exec "paplay ~/.local/sounds/proprietary/anno_hunger.wav"
 	bindsym k exec "paplay ~/.local/sounds/proprietary/anno_kontor.wav"
 	bindsym v exec "paplay ~/.local/sounds/proprietary/anno_versagt.wav"
-    bindsym n exec "paplay ~/.local/sounds/proprietary/computer_sagt_nein.wav"
+  bindsym n exec "paplay ~/.local/sounds/proprietary/computer_sagt_nein.wav"
 	bindsym o exec "paplay ~/.local/sounds/proprietary/ohmygoditsburning.flac"
 	bindsym g exec "paplay ~/.local/sounds/proprietary/daswargut.wav"
 	bindsym y exec "paplay ~/.local/sounds/proprietary/yipyipyip_cannibal.wav"
-        # back to normal: Enter or Escape
-        bindsym Return mode "default"
-        bindsym Escape mode "default"
+  # back to normal: Enter or Escape
+  bindsym Return mode "default"
+  bindsym Escape mode "default"
 }
